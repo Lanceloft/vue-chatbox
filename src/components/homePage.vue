@@ -20,7 +20,6 @@ export default {
 
   sockets: {
     'chat message': function (msg) {
-      console.log(msg);
       this.messages.push(msg);
     },
   },

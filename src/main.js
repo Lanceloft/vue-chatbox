@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import VueRouter from 'vue-router';
-import Mint from 'mint-ui';
+import MintUI from 'mint-ui';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
 import VueSocketio from 'vue-socket.io';
@@ -12,7 +12,7 @@ import store from './store';
 Vue.config.productionTip = false;
 
 Vue.use(Vuex);
-Vue.use(Mint);
+Vue.use(MintUI);
 Vue.use(VueRouter);
 Vue.use(VueAxios, axios);
 Vue.use(VueSocketio, 'http://127.0.0.1:3000');

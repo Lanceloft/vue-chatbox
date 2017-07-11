@@ -1,13 +1,19 @@
 var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
+var userNum = 0;
 
 io.on('connection', function (socket) {
-  console.log('新连接已创建 !');
+  userNum++;
+  io.emit('user in', userNum);
 
   socket.on('chat message', function(msg) {
     io.emit('chat message', msg);
-    console.log(msg);
+  });
+
+  socket.on('disconnect', function() {
+    userNum--;
+    io.emit('user in', userNum);
   });
 });
 

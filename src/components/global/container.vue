@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="container">
     <li v-for="item in msgs">
       {{ item }}
     </li>
@@ -7,6 +7,8 @@
 </template>
 
 <script>
+import '../../style/container.scss';
+
 export default {
   props: {
     msgs: Array,
