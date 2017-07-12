@@ -18,7 +18,7 @@ Vue.use(VueAxios, axios);
 Vue.use(VueSocketio, 'http://127.0.0.1:3000');
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'hash',
   routes,
 });
 
