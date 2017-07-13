@@ -1,4 +1,9 @@
 .chat-input {
   position: absolute;
   bottom: 0;
+  width: 100%;
+
+  .mint-cell-wrapper {
+    padding-right: 0;
+  }
 }

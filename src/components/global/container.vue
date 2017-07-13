@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <li v-for="item in msgs">
-      {{ item }}
-    </li>
+    <div class="message-list" v-for="item in msgs">
+      <div>{{ item }}</div>
+    </div>
   </div>
 </template>
 
