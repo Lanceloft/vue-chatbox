@@ -8,7 +8,8 @@ io.on('connection', function (socket) {
   io.emit('user in', userNum);
 
   socket.on('chat message', function(msg) {
-    io.emit('chat message', msg);
+    // io.emit('chat message', msg); // 向所有人发消息
+    socket.broadcast.emit('chat message', msg); // 除自己发消息
   });
 
   socket.on('disconnect', function() {
