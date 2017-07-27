@@ -1,10 +1,27 @@
 .container {
+  margin: 10px;
+  // .message-list {
+  //   display: table;
+  //   float: right;
+  //   margin: 3px 20px 0 0;
+  //   padding: 8px;
+  //   max-width: 200px;
+  //   border: 1px solid #ccc;
+  //   border-radius: 8px;
+  // }
+
   .message-list {
-    display: table;
-    margin: 3px 20px 0 0;
-    padding: 8px;
-    max-width: 200px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    margin-bottom: 10px;
+    line-height: 24px;
+
+    .message-item {
+      padding: 5px 12px;
+      border-radius: 5px;
+      background: #ccc;
+    }
+  }
+
+  .me {
+    text-align: right;
   }
 }
