@@ -1,27 +1,28 @@
 /* eslint-disable */
-import {} from './mutation-types';
+import { PUSH_ON_MASSAGE } from './mutation-types';
 
 const state = {
-  connect: false,
-  message: null,
+  message: [],
 };
 
 const mutations = {
-  // [SOCKET_CONNECT](state, status) {
-  //   state.connect = true;
-  // },
-  //
-  // [SOCKET_USER_MESSAGE](state, massage) {
-  //   state.message = message;
-  // },
+  [PUSH_ON_MASSAGE](state, param) {
+    console.log(param);
+  },
 
 };
 
 const getters = {
+  getMessage() {
+    return state.massage;
+  },
 
 };
 
 const actions = {
+  ownMsg: ({ commit }, { param }) => {
+    commit(PUSH_ON_MASSAGE, param );
+  },
 
 };
 

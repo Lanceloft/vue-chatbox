@@ -20,6 +20,10 @@ export default {
   methods: {
     submit() {
       if (this.message !== '') {
+        this.$store.dispatch({
+          type: 'ownMsg',
+          param: this.message,
+        });
         this.$socket.emit('chat message', this.message);
         this.message = '';
       } else {

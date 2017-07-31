@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import FHeader from './global/header';
 import FContainer from './global/container';
 import FSend from './global/send';
@@ -14,8 +15,14 @@ import FSend from './global/send';
 export default {
   data() {
     return {
-      messages: [],
+      // messages: [],
     };
+  },
+
+  computed: {
+    ...mapGetters({
+      messages: 'getMessage',
+    }),
   },
 
   sockets: {

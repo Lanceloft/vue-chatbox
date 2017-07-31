@@ -9,6 +9,8 @@
 </template>
 
 <script>
+// import { mapGetters } from 'vuex';
+
 import '../../style/container.scss';
 
 export default {
@@ -20,6 +22,12 @@ export default {
     return {
     };
   },
+
+  // computed: {
+  //   ...mapGetters({
+  //     msgs: 'getMessage',
+  //   }),
+  // },
 
   components: {},
 };
