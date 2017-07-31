@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters, mapState } from 'vuex';
 import FHeader from './global/header';
 import FContainer from './global/container';
 import FSend from './global/send';
@@ -15,20 +15,33 @@ import FSend from './global/send';
 export default {
   data() {
     return {
-      // messages: [],
+      messages: [],
     };
   },
 
-  computed: {
-    ...mapGetters({
-      messages: 'getMessage',
-    }),
+  watch: {
+    count() {
+      this.messages.push(this.ownMessages);
+    },
   },
 
   sockets: {
     'chat message': function (msg) {
       this.messages.push(msg);
     },
+  },
+
+  computed: {
+    ...mapState({
+      count: state => state.chat.message,
+    }),
+
+    ...mapGetters({
+      ownMessages: 'getMessage',
+    }),
+  },
+
+  methods: {
   },
 
   components: { FHeader, FContainer, FSend },

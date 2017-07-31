@@ -23,12 +23,6 @@ export default {
     };
   },
 
-  // computed: {
-  //   ...mapGetters({
-  //     msgs: 'getMessage',
-  //   }),
-  // },
-
   components: {},
 };
 </script>

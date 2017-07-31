@@ -2,19 +2,19 @@
 import { PUSH_ON_MASSAGE } from './mutation-types';
 
 const state = {
-  message: [],
+  message: '',
 };
 
 const mutations = {
   [PUSH_ON_MASSAGE](state, param) {
-    console.log(param);
+    state.message = param;
   },
 
 };
 
 const getters = {
   getMessage() {
-    return state.massage;
+    return state.message;
   },
 
 };
